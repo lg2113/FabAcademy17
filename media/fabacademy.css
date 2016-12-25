@@ -39,6 +39,10 @@
   margin-bottom:15px;
 }
 
+.container p img {
+  border-radius: 50%;
+}
+
 legend { 
 	margin:3px; 
 	text-align:center;
