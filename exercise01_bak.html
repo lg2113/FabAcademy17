@@ -8,7 +8,7 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2017 - Louis Goh</title>
+    <title>Fab Academy 2016 - Louis Goh</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -81,73 +81,136 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise 1- Principles & Practices, Project Management</h1>
-
-     <br><br>
-     <h3> <a href="http://www.sublimetext.com/3">Sublime Text 3</a> and <a href="https://notepad-plus-plus.org/">Notepad ++</a> </h3>
-
+     <h2>Exercise...</h1>
     
-   <p>I had some web programming background and I am thankful for that as it would be easier for me to pull through this exercise. I was a Notepad++ user back in the days, it was simple and free to use.
-	<br>
-	<br>
-
-	<img src="./media/images/exercise1/notepadpp.png"/>
-	<p style="text-align: center;"><i>Ahh, the good old days...</i></p>
-
-	<br><br>
-   I was also introduced to Sublime Text 3 by Dorville and Steven Chew, my Local Gurus. I was quite impressed by the plugin, Emmet, it helped me in autocompleting the HTML Code. I felt that it is useful but at times it is quite annoying as I have a habit to close the Tags on myself.	But it is never too much to complain if there is a helping hand! :)
-
-   <br><br>
-
-   <img src="./media/images/exercise1/sublime.png"/>
-	<p style="text-align: center;"><i>"Everything is awesome!" - Emmet, Lego Movie</i></p>
-
-	<br><br>
-
-   Although Sublime Text 3 is free, but it often prompts to pay/donate as compared to Notepad ++ which is really Free! I will be using Sublime Text 3 for this phase of Fab Academy to take this opportunity to appreciate this software!
-
-   </p>
-
-   <h3> <a href="https://nodejs.org/en/">NodeJS</a> + BrowserSync <a href="https://www.browsersync.io/"></h3>
-   <p> Yikes! This is my first time hearing NodeJS! Setup is easy, but to execute it is another! 
-   <br>
-   Browsersync is an add on for NodeJS, I had to use the Command Prompt and run the code, luckily Steven shared with us the code and I had to save it as a sticky note on my desktop!
-
-  <br>
-  It works similarly as WAMP (Windows Apache MySQL & PHP), but it is used to "preview" my work locally before it goes "live". And it instantly refreshes my page upon saving the file, how cool is that!
-
-   </p>
-
-<img src="./media/images/exercise1/nodejs.png"/>
-	<pre class="prettyprint linenums">Code: browser-sync start --server --directory --files "**/*"</pre>
-
-	<br><br>
-   <h3><a href="https://github.com/">Git Hub</a></h3>
-
-   <p> Now, Git is relatively new to me, yes I've heard of it, but to use it, no. This is my first time handling and using Git. I am also trying to understand the benefit of it besides being able to share things with the community and to use it in the future as my daily driver.
-
-   <br><br>
-
-   Same as NodeJS, I will need to note it down for further reference!
+    <h3>Menu</h3>
+	<p>
+	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
+	</p>
+    
+    <h3>Text</h3>
+	<p>
+	You can set it up with:
 	<pre class="prettyprint linenums">
-		
-		To add multi files – git add file1 file 2
-		To add a directory – git add directoryname
-		To remove file  - git rm (result remove from Git and local file system)
-		To stop tracking a file but still keep local copy – git rm –cached [filename]
-		Once files ready git commit –m “test commit”
-		To check status -  git status 
-		To add push code – git push --all
+	&ltp&gt;
+	Your text here
+	&lt/p&gt;</pre>
+	</p>
+	Result:
+	<p>
+	Your text here
+	</p>
+	
+	<h3>Images</h3>
+	<p>
+	You can set it up with:
+	<pre class="prettyprint linenums">
+	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
+	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
+	&lt/p&gt;</pre>
+	</p>
+	Result:
+	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
+	<legend>Here's the legend of the picture.</legend>
+	</p>
+     
+	<h3>Code</h3>
+	<p>
+	You can set it up with:
+	<pre class="prettyprint linenums">
+	&ltpre class="prettyprint linenums"&gt;
+	Your code here
+	&lt/pre&gt;</pre>
+	
+	Result:
+	<pre class="prettyprint linenums">
+	for i in members:
+		print ""
+		print "USER:",members[i]
+		print "Loading connections..."
+		followers = load_connections([i], "followers")
+		friends = load_connections([i], "friends")
 
-	</pre>
+		# Add edges...
+		print "Building the graph..."
 
-
-<br><br>
-
-
-
-   </p>
+		for f in followers:
+			for k in followers[f]:
+				graph.add_edge(k,f)
+	
+		for f in friends:
+			for k in friends[f]:
+				graph.add_edge(f,k)</pre>
+	</p>
+	
+	<h3>3D Model</h3>
+	<p>	
+	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
+	<pre class="prettyprint linenums">
+	&ltcanvas id="cv" width=640 height=480&gt;
+	It seems you are using an outdated browser that does not support canvas :-(
+	&lt/canvas&gt;
+	&ltscript type="text/javascript"&gt;
+		var canvas = document.getElementById('cv');
+		var viewer = new JSC3D.Viewer(canvas);
+		viewer.setParameter('SceneUrl','media/monkey.stl');
+		viewer.setParameter('ModelColor','#CAA618');
+		viewer.setParameter('BackgroundColor1','#E5D7BA');
+		viewer.setParameter('BackgroundColor2','#383840');
+		viewer.setParameter('RenderMode','flat');
+		viewer.setParameter('MipMapping','on');
+		viewer.setParameter('Definition','high');
+		viewer.setParameter('Renderer','webgl');
+		viewer.init();
+		viewer.update();
+	&lt/script&gt;</pre>
+	
+	You can set up the path to the 3D model (.stl/.obj) within this line:
+	<pre class="prettyprint linenums">
+	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
+	
+	Result:
+	<canvas id="cv" width=640 height=480>
+	It seems you are using an outdated browser that does not support canvas :-(
+	</canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById('cv');
+		var viewer = new JSC3D.Viewer(canvas);
+		viewer.setParameter('SceneUrl','media/monkey.stl');
+		viewer.setParameter('ModelColor','#CAA618');
+		viewer.setParameter('BackgroundColor1','#E5D7BA');
+		viewer.setParameter('BackgroundColor2','#383840');
+		viewer.setParameter('RenderMode','flat');
+		viewer.setParameter('MipMapping','on');
+		viewer.setParameter('Definition','high');
+		viewer.setParameter('Renderer','webgl');
+		viewer.init();
+		viewer.update();
+	</script> 
+    </p> 
     
+    <h3>Download</h3>
+	<p>
+	You can set up a button for files to be downloaded with:
+	<pre class="prettyprint linenums">
+	&lta href="#"&gt;
+	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
+	&lt/a&gt;</pre>
+	</p>
+	
+	<p>
+	Result:
+	</p>
+	<p>
+	<a href="#">
+	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
+	</a>
+	</p>
+      
+    <h3>Would you like to insert more style/elements?</h3>
+      <p>
+      Check the documentation of Bootstrap <a href="">here</a>.
+      </p>
     <!-- End of your content -->
 
     </div> <!-- /container -->
